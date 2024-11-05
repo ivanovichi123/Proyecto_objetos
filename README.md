@@ -2,12 +2,11 @@
 
 ## Contexto
 
-Un cliente quiere rentar una habitación en un hotel, pero antes de hacerlo, necesita asegurarse de que la habitación cumple con sus necesidades y preferencias. Para tomar una decisión, el cliente quiere revisar los detalles de los muebles que hay en la habitación, como cuántos hay, qué modelo son y cuánto tiempo tienen. Además, el cliente puede agregar más muebles a la habitación y ver cómo cambia el precio final.
+Eres el propietario de una tienda que necesita llevar un inventario detallado de sus productos. Este inventario debe incluir información clave como el precio de venta, el modelo y la antigüedad de los artículos, además de permitir la incorporación de nuevos productos con sus precios. El programa también debe permitir calcular los impuestos sobre el almacenamiento de los productos.
 
 ## Funcionalidad
 
-El programa permite al cliente ver la información de tres muebles principales en la habitación: la cama, la televisión y la mesa. Para cada mueble, el cliente puede ver la cantidad, el modelo y la antigüedad, lo que le ayuda a evaluar si la habitación es adecuada para él.
-El cliente también tiene la opción de añadir más muebles a la habitación para personalizarla según sus necesidades. Al hacerlo, el programa ajusta el precio total de la renta, de modo que el cliente puede ver el costo actualizado antes de tomar una decisión.
+El programa ofrece la capacidad de visualizar la información de los productos en venta, modificar sus parámetros según sea necesario y calcular los impuestos que deben pagarse por el almacenamiento de los mismos.
 
 ## Consideraciones
-El programa solo corre en la consola, para compilar utilizar "g++ ......".
+El programa solo corre en la consola, para compilar utilizar "g++ mesa.h television.h cama.h main.cpp".
