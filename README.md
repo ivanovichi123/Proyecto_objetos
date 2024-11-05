@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Un cliente está interesado en rentar una habitación de hotel, pero antes de hacerlo desea verificar que esta cumpla con ciertos criterios que le ayuden a decidir si realmente es adecuada para él.
+Un cliente está interesado en rentar una habitación en un hotel, pero antes de comprometerse, desea asegurarse de que esta cumple con ciertos criterios que se ajusten a sus necesidades y preferencias. Para tomar una decisión informada, el cliente necesita poder revisar personalmente distintos aspectos de los muebles que se encuentran en la habitación, tales como su cantidad, modelo y antigüedad.
 
 ## Funcionalidad
 
