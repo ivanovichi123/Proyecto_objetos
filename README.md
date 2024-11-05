@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Eres el propietario de una tienda que necesita llevar un inventario detallado de sus productos. Este inventario debe incluir información clave como el precio de venta, el modelo y la antigüedad de los artículos, además de permitir la incorporación de nuevos productos con sus precios. El programa también debe permitir calcular los impuestos sobre el almacenamiento de los productos.
+Eres el propietario de una tienda que necesita llevar un inventario detallado de sus productos. Este inventario debe incluir información clave como el precio de venta, el modelo y la antigüedad de los artículos, además de permitir la incorporación de nuevos productos con sus precios. El programa también permitir calcular los impuestos sobre el almacenamiento de los productos.
 
 ## Funcionalidad
 
