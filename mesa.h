@@ -6,6 +6,8 @@ class Mesa{
 	std::string modelo;
 	float precio;
 	float impuesto;
+	int durabilidad = 15;
+	float descuento = 0.01;
 	
 	public:
 	Mesa();
@@ -17,6 +19,8 @@ class Mesa{
 	void set_antig(int);
 	void set_precio(float);
 	float impuestos(float);
+	int cuanto_dura(int);
+	float descuento_vejez(int, float);
 };
 
 
@@ -47,4 +51,12 @@ void Mesa::set_precio(float prec){
 float Mesa::impuestos(float prec) {
 	impuesto = prec * 0.30;
 	return impuesto;
+}
+
+int Mesa::cuanto_dura(int antiguedad) {
+	return durabilidad - antiguedad;
+}
+
+float Mesa::descuento_vejez(int antiguedad, float precio) {
+	return precio - (precio *(antiguedad * descuento));
 }

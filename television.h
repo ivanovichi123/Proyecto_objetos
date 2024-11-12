@@ -6,6 +6,8 @@ class Television{
 	std::string modelo;
 	float precio;
 	float impuesto;
+	int durabilidad = 7;
+	float descuento = 0.05;
 	
 	public:
 	Television();
@@ -17,6 +19,8 @@ class Television{
 	void set_antig(int);
 	void set_precio(float);
 	float impuestos(float);
+	int cuanto_dura(int);
+	float descuento_vejez(int, float);
 };
 
 
@@ -47,4 +51,12 @@ void Television::set_precio(float prec){
 float Television::impuestos(float prec) {
 	impuesto = prec * 0.30;
 	return impuesto;
+}
+
+int Television::cuanto_dura(int antiguedad) {
+	return durabilidad - antiguedad;
+}
+
+float Television::descuento_vejez(int antiguedad, float precio) {
+	return precio - (precio *(antiguedad * descuento));
 }
