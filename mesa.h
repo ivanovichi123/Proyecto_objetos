@@ -1,62 +1,31 @@
-#include <string>
+#include <string>// Para usar cadenas de texto (std::string)
+// Comprueba si el archivo ya se incluyó; si no, lo incluye
+#ifndef MESA_H 
+#define MESA_H
 
-class Mesa{
-	private:
-	int antig;
-	std::string modelo;
-	float precio;
-	float impuesto;
-	int durabilidad = 15;
-	float descuento = 0.01;
-	
-	public:
-	Mesa();
-	Mesa(std::string mod, int an, float prec): modelo(mod), antig(an), precio(prec){};;
-	std::string get_modelo();
-	int get_antig();
-	float get_precio();
-	void set_modelo(std::string);
-	void set_antig(int);
-	void set_precio(float);
-	float impuestos(float);
-	int cuanto_dura(int);
-	float descuento_vejez(int, float);
+// Clase Mesa que hereda de la clase base Producto
+class Mesa : public Producto {
+    private:
+		// Atributo específico de la mesa que almacena el número de patas
+        int patas;  
+
+    public:
+        // Constructor por defecto de la mesa
+        Mesa() : Producto(0, "", 0.0, 15, 0.01), patas(0) {};
+
+        // Constructor que recibe parámetros específicos para crear una mesa
+        // Llama al constructor de la clase que hereda (Producto) y 
+		//establece el valor de las patas
+        Mesa(int a, std::string m, float p, int pa) 
+            : Producto(a, m, p, 15, 0.01), patas(pa) {};
+
+        // Método que devuelve el numero de patas
+        int get_patas();
 };
 
-
-std::string Mesa::get_modelo(){
-  return modelo;
+// Devuelve el numero de patas de la mesa
+int Mesa::get_patas() {
+    return patas;
 }
 
-int Mesa::get_antig() {
-	return antig;
-}
-
-float Mesa::get_precio() {
-	return precio;
-}
-
-void Mesa::set_modelo(std::string mod){
-  modelo = mod;
-}
-
-void Mesa::set_antig(int an) {
-	antig = an;
-}
-
-void Mesa::set_precio(float prec){
-	precio = prec;
-}
-
-float Mesa::impuestos(float prec) {
-	impuesto = prec * 0.30;
-	return impuesto;
-}
-
-int Mesa::cuanto_dura(int antiguedad) {
-	return durabilidad - antiguedad;
-}
-
-float Mesa::descuento_vejez(int antiguedad, float precio) {
-	return precio - (precio *(antiguedad * descuento));
-}
+#endif 

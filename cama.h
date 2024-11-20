@@ -1,63 +1,33 @@
-#include <string>
+#include <string> // Para usar cadenas de texto (std::string)
+// Comprueba si el archivo ya se incluyó; si no, lo incluye
+#ifndef CAMA_H   
+#define CAMA_H
 
-class Cama{
-	private:
-	int antig;
-	std::string modelo;
-	float precio;
-	float impuesto;
-	int durabilidad = 10;
-	float descuento = 0.02;
-	
-	public:
-	Cama();
-	Cama(std::string mod, int an, float prec): modelo(mod), antig(an), precio(prec){};
-	std::string get_modelo();
-	int get_antig();
-	float get_precio();
-	void set_modelo(std::string);
-	void set_antig(int);
-	void set_precio(float);
-	float impuestos(float);
-	int cuanto_dura(int);
-	float descuento_vejez(int, float);
+// Clase Cama que hereda de la clase base Producto
+class Cama : public Producto {
+    private:
+		// Atributo específico de la cama que almacena el tipo de colchón
+        std::string colchon;  
+
+    public:
+        // Constructor por defecto de la cama
+        Cama() : Producto(0, "", 0.0, 10, 0.02), colchon("") {};
+
+        // Constructor que recibe parámetros específicos para crear una cama
+        // Llama al constructor de la clase que hereda (Producto) y 
+		//establece el valor del colchon
+        Cama(int a, std::string m, float p, std::string c) 
+            : Producto(a, m, p, 10, 0.02), colchon(c) {};
+
+        // Método que devuelve el tipo de colchon
+        std::string get_colchon();
 };
 
 
-std::string Cama::get_modelo(){
-  return modelo;
+// Devuelve el tipo de colchón de la cama
+std::string Cama::get_colchon() {
+    return colchon;
 }
 
-int Cama::get_antig() {
-	return antig;
-}
-
-float Cama::get_precio() {
-	return precio;
-}
-
-void Cama::set_modelo(std::string mod){
-  modelo = mod;
-}
-
-void Cama::set_antig(int an) {
-	antig = an;
-}
-
-void Cama::set_precio(float prec){
-	precio = prec;
-}
-
-float Cama::impuestos(float prec) {
-	impuesto = prec * 0.30;
-	return impuesto;
-}
-
-int Cama::cuanto_dura(int antiguedad) {
-	return durabilidad - antiguedad;
-}
-
-float Cama::descuento_vejez(int antiguedad, float precio) {
-	return precio - (precio *(antiguedad * descuento));
-}
+#endif
 

@@ -1,62 +1,32 @@
-#include <string>
+#include <string> // Para usar cadenas de texto (std::string)
+// Comprueba si el archivo ya se incluyó; si no, lo incluye
+#ifndef TELEVISION_H 
+#define TELEVISION_H
 
-class Television{
-	private:
-	int antig;
-	std::string modelo;
-	float precio;
-	float impuesto;
-	int durabilidad = 7;
-	float descuento = 0.05;
-	
-	public:
-	Television();
-	Television(std::string mod, int an, float prec): modelo(mod), antig(an), precio(prec){};
-	std::string get_modelo();
-	int get_antig();
-	float get_precio();
-	void set_modelo(std::string);
-	void set_antig(int);
-	void set_precio(float);
-	float impuestos(float);
-	int cuanto_dura(int);
-	float descuento_vejez(int, float);
+// Clase Television que hereda de la clase base Producto
+class Television : public Producto {
+    private:
+		// Atributo específico de la mesa que almacena las pulgadas
+        float pulgadas;  
+
+    public:
+        // Constructor por defecto de la television
+        Television() : Producto(0, "", 0.0, 7, 0.05), pulgadas(0) {};
+
+        // Constructor que recibe parámetros específicos 
+		// para crear una television.
+        // Llama al constructor de la clase que hereda (Producto) y 
+		// establece el valor de las pulgadas
+        Television(int a, std::string m, float p, float pu) 
+            : Producto(a, m, p, 7, 0.05), pulgadas(pu) {};
+
+        // Método que devuelve el valor de las patas
+        float get_pulgadas();
 };
 
-
-std::string Television::get_modelo(){
-  return modelo;
+// Devuelve el valor de las pulgadas
+float Television::get_pulgadas() {
+    return pulgadas;
 }
 
-int Television::get_antig() {
-	return antig;
-}
-
-float Television::get_precio() {
-	return precio;
-}
-
-void Television::set_modelo(std::string mod){
-  modelo = mod;
-}
-
-void Television::set_antig(int an) {
-	antig = an;
-}
-
-void Television::set_precio(float prec){
-	precio = prec;
-}
-
-float Television::impuestos(float prec) {
-	impuesto = prec * 0.30;
-	return impuesto;
-}
-
-int Television::cuanto_dura(int antiguedad) {
-	return durabilidad - antiguedad;
-}
-
-float Television::descuento_vejez(int antiguedad, float precio) {
-	return precio - (precio *(antiguedad * descuento));
-}
+#endif 
