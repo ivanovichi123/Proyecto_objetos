@@ -1,5 +1,5 @@
-#include <iostream>		  // Para imprimir información en consola
-#include <string>		  // Para usar cadenas de texto (std::string)
+#include <iostream>       // Para imprimir información en consola
+#include <string>         // Para usar cadenas de texto (std::string)
 #include "productos.h"    // Incluye la clase Producto
 #include "inventario.h"   // Incluye la clase Inventario
 
