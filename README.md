@@ -111,7 +111,6 @@ La clase `Inventario` gestiona los productos y tiene los siguientes atributos y 
 - `camas` (`arreglo<Cama>`): Un arreglo de objetos `Cama`.
 - `mesas` (`arregloMesa>`): Un arreglo de objetos `Mesa`.
 - `televisiones` (`arreglo<Television>`): Un arreglo de objetos `Television`.
-- `impuesto` (`float`): El impuesto total calculado para todos los productos del inventario.
 
 #### Métodos:
 - `impuesto_total()`: Calcula el impuesto total sobre todos los productos en el inventario.
