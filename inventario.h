@@ -16,9 +16,7 @@ class Inventario {
 		// Arreglo para almacenar hasta 100 mesas		
         Mesa mesa[100];    
 		// Arreglo para almacenar hasta 100 televisores		
-        Television television[100]; 
-		// Impuesto aplicado a los productos
-        float impuesto;    
+        Television television[100];   
 		// Cantidad de camas en el inventario		
         int cposicion = 0;    
 		// Cantidad de mesas en el inventario
@@ -28,7 +26,7 @@ class Inventario {
 
     public:
         // Constructor del inventario
-        Inventario() : impuesto(0), cposicion(0), mposicion(0), tposicion(0) {}
+        Inventario() :cposicion(0), mposicion(0), tposicion(0) {}
 
         // Métodos para crear productos y agregarlos al inventario
         void crea_cama(int, std::string, float, std::string);
