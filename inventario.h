@@ -114,15 +114,15 @@ void Inventario::mostrar_productos() {
     std::cout << "CAMAS: " << std::endl;
     for (int i = 0; i < cposicion; i++) {
         std::cout << "Modelo: " << cama[i].get_modelo() << ", Precio: "
-                  << cama[i].get_precio() << ", Antigüedad: "
-                  << cama[i].get_antig() << ", Colchón: "
+                  << cama[i].get_precio() << ", Antiguedad: "
+                  << cama[i].get_antig() << ", Colchon: "
                   << cama[i].get_colchon() << std::endl;
     }
 
     std::cout << "MESAS: " << std::endl;
     for (int i = 0; i < mposicion; i++) {
         std::cout << "Modelo: " << mesa[i].get_modelo() << ", Precio: "
-                  << mesa[i].get_precio() << ", Antigüedad: "
+                  << mesa[i].get_precio() << ", Antiguedad: "
                   << mesa[i].get_antig() << ", Patas: "
                   << mesa[i].get_patas() << std::endl;
     }
@@ -130,7 +130,7 @@ void Inventario::mostrar_productos() {
     std::cout << "TELEVISIONES: " << std::endl;
     for (int i = 0; i < tposicion; i++) {
         std::cout << "Modelo: " << television[i].get_modelo() << ", Precio: "
-                  << television[i].get_precio() << ", Antigüedad: "
+                  << television[i].get_precio() << ", Antiguedad: "
                   << television[i].get_antig() << ", Pulgadas: "
                   << television[i].get_pulgadas() << std::endl;
     }
