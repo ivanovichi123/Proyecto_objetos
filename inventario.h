@@ -26,7 +26,7 @@ class Inventario {
 
     public:
         // Constructor del inventario
-        Inventario() :cposicion(0), mposicion(0), tposicion(0) {}
+        Inventario() :cposicion(0), mposicion(0), tposicion(0) {};
 
         // Métodos para crear productos y agregarlos al inventario
         void crea_cama(int, std::string, float, std::string);
