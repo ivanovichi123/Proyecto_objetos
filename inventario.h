@@ -82,15 +82,15 @@ float Inventario::impuesto_total() {
     int total = 0;        // Precio acumulado de todos los productos
 
     // Suma los precios de todas las camas
-    for (int i = 0; i < cposicion; i++) {
+    for (int i = 0; i <= cposicion; i++) {
         total += cama[i].get_precio();
     }
     // Suma los precios de todas las mesas
-    for (int i = 0; i < mposicion; i++) {
+    for (int i = 0; i <= mposicion; i++) {
         total += mesa[i].get_precio();
     }
     // Suma los precios de todas las televisiones
-    for (int i = 0; i < tposicion; i++) {
+    for (int i = 0; i <= tposicion; i++) {
         total += television[i].get_precio();
     }
 
