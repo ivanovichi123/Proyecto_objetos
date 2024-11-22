@@ -18,7 +18,7 @@ class Producto {
     public:
         // Constructor de la clase
         Producto(int a, std::string m, float p, int du, float de) 
-            : antig(a), modelo(m), precio(p), durabilidad(du), descuento(de) {}
+            : antig(a), modelo(m), precio(p), durabilidad(du), descuento(de) {};
 
         // Métodos getter para obtener los valores de los atributos
         std::string get_modelo(); 
