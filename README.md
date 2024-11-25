@@ -132,4 +132,10 @@ La clase `Inventario` gestiona los productos y tiene los siguientes atributos y 
 1. **Crear productos**: Puedes crear nuevos productos (camas, mesas, televisores) usando los métodos de la clase `Inventario`.
 2. **Ver detalles del inventario**: El sistema muestra toda la información relacionada con cada producto, incluyendo su modelo, precio, antigüedad, durabilidad y cualquier descuento aplicable.
 3. **Calcular impuestos**: El sistema calcula los impuestos totales para todos los productos en el inventario.
+4. Verifica si ingresaste el tipo de dato incorrecto.
+
+## Referencias
+- std::ignore - cppreference.com. (s. f.). https://en.cppreference.com/w/cpp/utility/tuple/ignore
+- González, J. D. M. (2021, 3 enero). Condicional switch. https://www.programarya.com/Cursos/C++/Condicionales/Condicional-switch#google_vignette
+- GeeksforGeeks. (2024, 28 mayo). How to Use cin.fail() Method in C++? GeeksforGeeks. https://www.geeksforgeeks.org/how-to-use-cin-fail-method-in-cpp/
 
