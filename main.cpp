@@ -1,3 +1,19 @@
+/*
+* Proyecto objetos
+* Ivan Arturo Rosas Balderas
+* A01713176
+* 26/11/2024
+*/
+
+/*
+* Este es un proyecto demo para la clase de Pensamiento
+* Computacional Orientado a Objetos. Es un programa que te
+* permite controlar tu inventario por medio de distintos
+* objetos siendo la mesa, cama y television asi como 
+*calcular los impuestos y descuentos de los porductos
+*/
+
+
 #include <iostream>       // Para imprimir información en consola
 #include <string>         // Para usar cadenas de texto (std::string)
 #include "productos.h"    // Incluye la clase Producto

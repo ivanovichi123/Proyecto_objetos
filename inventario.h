@@ -1,3 +1,15 @@
+/*
+* Proyecto objetos
+* Ivan Arturo Rosas Balderas
+* A01713176
+* 26/11/2024
+*/
+
+/*
+* Clase Inventario que alamcenara los objetos creados de las clases de
+* Mesa, Cama y Television
+*/
+
 #include "cama.h"       // Clase para trabajar con camas
 #include "mesa.h"       // Clase para trabajar con mesas
 #include "television.h" // Clase para trabajar con televisores
@@ -25,58 +37,69 @@ class Inventario {
         int tposicion = 0;       
 
     public:
-        // Constructor del inventario
+        /* Constructor del inventario
+		*/
         Inventario() :cposicion(0), mposicion(0), tposicion(0) {};
 
-        // Métodos para crear productos y agregarlos al inventario
+        /* Métodos para crear productos y agregarlos al inventario
+		*/
         void crea_cama(int, std::string, float, std::string);
         void crea_mesa(int, std::string, float, int);
         void crea_television(int, std::string, float, float);
 
-        // Calcula el impuesto total de todos los productos en el inventario
+        /* Calcula el impuesto total de todos los productos en el inventario
+		*/
         float impuesto_total();
 
-        // Limpia los arreglos
+        /* Limpia los arreglos
+		*/
         void limpiar_arreglos();
 
-        // Muestra todos los productos almacenados
+        /* Muestra todos los productos almacenados
+		*/
         void mostrar_productos();
 
-        // Métodos para obtener productos individuales por su índice
+        /* Métodos para obtener productos individuales por su índice
+		*/
         Cama get_cama(int);
         Mesa get_mesa(int);
         Television get_television(int);
 
-        // Métodos para obtener la cantidad de productos en cada categoría
+        /* Métodos para obtener la cantidad de productos en cada categoría
+		*/
         int get_cposicion();
         int get_mposicion();
         int get_tposicion();
 };
 
-// Implementación de los métodos
+/* Implementación de los métodos
 
-// Agrega una nueva cama al inventario
+* Agrega una nueva cama al inventario
+*/
 void Inventario::crea_cama(int a, std::string m, float p, std::string c) {
     Cama nueva_cama(a, m, p, c);
     cama[cposicion] = nueva_cama; // Se agrega al arreglo
     cposicion++;                  // Se incrementa la posición de camas
 }
 
-// Agrega una nueva mesa al inventario
+/* Agrega una nueva mesa al inventario
+*/
 void Inventario::crea_mesa(int a, std::string m, float p, int pa) {
     Mesa nueva_mesa(a, m, p, pa);
     mesa[mposicion] = nueva_mesa; // Se agrega al arreglo
     mposicion++;                  // Se incrementa la posición de mesas
 }
 
-// Agrega una nueva televisión al inventario
+/* Agrega una nueva televisión al inventario
+*/
 void Inventario::crea_television(int a, std::string m, float p, float pu) {
     Television nueva_television(a, m, p, pu);
     television[tposicion] = nueva_television; // Se agrega al arreglo
     tposicion++;   // Se incrementa la posición de televisores
 }
 
-// Calcula el impuesto total sobre todos los productos
+/* Calcula el impuesto total sobre todos los productos
+*/
 float Inventario::impuesto_total() {
     float impuesto = 0.3; // Porcentaje de impuesto
     int total = 0;        // Precio acumulado de todos los productos
@@ -97,7 +120,8 @@ float Inventario::impuesto_total() {
     return total * impuesto; // Calcula el impuesto total
 }
 
-// Limpia todos los productos en los arreglos
+/* Limpia todos los productos en los arreglos
+*/
 void Inventario::limpiar_arreglos() {
     for (int i = 0; i < 100; i++) {
 		// Limpia el arreglo de cama
@@ -109,7 +133,8 @@ void Inventario::limpiar_arreglos() {
     }
 }
 
-// Muestra la información de todos los productos
+/* Muestra la información de todos los productos
+*/
 void Inventario::mostrar_productos() {
     std::cout << "CAMAS: " << std::endl;
     for (int i = 0; i < cposicion; i++) {
@@ -136,7 +161,8 @@ void Inventario::mostrar_productos() {
     }
 }
 
-// Obtiene una cama por índice
+/* Obtiene una cama por índice
+*/
 Cama Inventario::get_cama(int index) {
     if (index >= 0 && index < cposicion) {
         return cama[index];
@@ -146,7 +172,8 @@ Cama Inventario::get_cama(int index) {
     }
 }
 
-// Obtiene una mesa por índice
+/* Obtiene una mesa por índice
+*/
 Mesa Inventario::get_mesa(int index) {
     if (index >= 0 && index < mposicion) {
         return mesa[index];
@@ -156,7 +183,8 @@ Mesa Inventario::get_mesa(int index) {
     }
 }
 
-// Obtiene una televisión por índice
+/* Obtiene una televisión por índice
+*/
 Television Inventario::get_television(int index) {
     if (index >= 0 && index < tposicion) {
         return television[index];
@@ -166,17 +194,20 @@ Television Inventario::get_television(int index) {
     }
 }
 
-// Obtiene la cantidad de camas en el inventario
+/* Obtiene la cantidad de camas en el inventario
+*/
 int Inventario::get_cposicion() {
     return cposicion;
 }
 
-// Obtiene la cantidad de mesas en el inventario
+/* Obtiene la cantidad de mesas en el inventario
+*/
 int Inventario::get_mposicion() {
     return mposicion;
 }
 
-// Obtiene la cantidad de televisiones en el inventario
+/* Obtiene la cantidad de televisiones en el inventario
+*/
 int Inventario::get_tposicion() {
     return tposicion;
 }

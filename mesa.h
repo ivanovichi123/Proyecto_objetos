@@ -1,3 +1,15 @@
+/*
+* Proyecto objetos
+* Ivan Arturo Rosas Balderas
+* A01713176
+* 26/11/2024
+*/
+
+/*
+* Clase Mesa que contiene los métodos para la construccion del objeto y
+* uno mas que devuelve el numero de patas
+*/
+
 #include <string>// Para usar cadenas de texto (std::string)
 // Comprueba si el archivo ya se incluyó; si no, lo incluye
 #ifndef MESA_H 
@@ -10,22 +22,27 @@ class Mesa : public Producto {
         int patas;  
 
     public:
-        // Constructor por defecto de la mesa
+        /*Constructor por defecto de la mesa
+		*/
         Mesa() : Producto(0, "", 0.0, 15, 0.01), patas(0) {};
 
-        // Constructor que recibe parámetros específicos para crear una mesa
-        // Llama al constructor de la clase que hereda (Producto) y 
-		//establece el valor de las patas
+        /* Constructor que recibe parámetros específicos para crear una mesa
+        * Llama al constructor de la clase que hereda (Producto) y 
+		* establece el valor de las patas
+		*/
         Mesa(int a, std::string m, float p, int pa) 
             : Producto(a, m, p, 15, 0.01), patas(pa) {};
 
-        // Método que devuelve el numero de patas
+        /*Método que devuelve el numero de patas
+		*/
         int get_patas();
 };
 
-// Devuelve el numero de patas de la mesa
+/*Devuelve el numero de patas de la mesa
+*/
 int Mesa::get_patas() {
     return patas;
 }
 
 #endif 
+
